@@ -23,17 +23,17 @@ const errorCode = document.getElementById("sj-error-code");
 const { ScramjetController } = $scramjetLoadController();
 
 const scramjet = new ScramjetController({
-	files: {
-		wasm: "/scram/scramjet.wasm.wasm",
-		all: "/scram/scramjet.all.js",
-		sync: "/scram/scramjet.sync.js",
-	},
+  files: {
+    wasm: "./scram/scramjet.wasm.wasm",
+    all: "./scram/scramjet.all.js",
+    sync: "./scram/scramjet.sync.js",
+  }
 });
 
 scramjet.init();
 
 const connection = new BareMux.BareMuxConnection();
-await connection.setTransport("/epoxy/index.js", [{ wisp: "wss://wisp.mercurywork.shop/" }]);
+await connection.setTransport("./libcurl/index.js", [{ wisp: "wss://wisp.mercurywork.shop/" }]);
 
 form.addEventListener("submit", async (event) => {
 	event.preventDefault();
