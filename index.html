@@ -8,14 +8,17 @@
     <link rel="shortcut icon" href="./favicon.webp" />
 
     <script>
-      localStorage.setItem("bare-mux-worker-loc", "./baremux/worker.js");
+      const workerLoc = "./baremux/worker.js";
+      localStorage.setItem("bare-mux-worker-loc", workerLoc);
+      window.bareMuxWorkerLoc = workerLoc;
     </script>
-	  
+
     <script src="./scram/scramjet.all.js"></script>
     <script src="./baremux/index.js"></script>
     <script src="./register-sw.js" defer></script>
     <script src="./search.js" defer></script>
     <script type="module" src="./index.js"></script>
+
   </head>
   <body>
     <div title="Scramjet Logo" class="flex-center logo-wrapper header-center">
