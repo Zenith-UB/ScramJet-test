@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="shortcut icon" href="./favicon.webp" />
 
+    <!-- 1. Inject structural variables globally using absolute subfolder routing -->
     <script>
-      const workerLoc = "/ScramJet-test/baremux/worker.js";
-      localStorage.setItem("bare-mux-worker-loc", workerLoc);
-      window.bareMuxWorkerLoc = workerLoc;
+      localStorage.setItem("bare-mux-worker-loc", "/ScramJet-test/baremux/worker.js");
     </script>
 
+    <!-- 2. Dependency Scripts -->
     <script src="./scram/scramjet.all.js"></script>
     <script src="./baremux/index.js"></script>
+    <script src="./register-sw.js" defer></script>
     <script src="./search.js" defer></script>
     <script type="module" src="./index.js"></script>
+
 
 
   </head>
