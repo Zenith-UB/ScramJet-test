@@ -32,7 +32,7 @@ const scramjet = new ScramjetController({
 
 scramjet.init();
 
-const connection = new BareMux.BareMuxConnection();
+const connection = new BareMux.BareMuxConnection("./baremux/worker.js");
 await connection.setTransport("./libcurl/index.js", [{ wisp: "wss://wisp.mercurywork.shop/" }]);
 
 form.addEventListener("submit", async (event) => {
