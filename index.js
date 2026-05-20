@@ -32,6 +32,8 @@ const scramjet = new ScramjetController({
 
 scramjet.init();
 
+localStorage.setItem("bare-mux-worker-loc", "./baremux/worker.js");
+
 const connection = new BareMux.BareMuxConnection();
 await connection.setTransport("./libcurl/index.js", [{ wisp: "wss://wisp.mercurywork.shop/" }]);
 
