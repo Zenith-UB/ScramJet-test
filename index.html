@@ -7,19 +7,17 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="shortcut icon" href="./favicon.webp" />
 
-    <!-- 1. Inject structural variables globally using absolute subfolder routing -->
+    <!-- 1. Pass the clean, base root path for the subfolder routing layer -->
     <script>
       localStorage.setItem("bare-mux-worker-loc", "/ScramJet-test/baremux/worker.js");
     </script>
 
-    <!-- 2. Dependency Scripts -->
+    <!-- 2. Core Frontend Script tags -->
     <script src="./scram/scramjet.all.js"></script>
     <script src="./baremux/index.js"></script>
     <script src="./register-sw.js" defer></script>
     <script src="./search.js" defer></script>
     <script type="module" src="./index.js"></script>
-
-
 
   </head>
   <body>
