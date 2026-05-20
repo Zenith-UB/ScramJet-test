@@ -1,5 +1,5 @@
-// 1. Destructure the initialization controller out of Mercury Workshop's global window scope
-const { ScramjetController } = window;
+// 1. Pull the main class directly from the true global window variable
+const ScramjetController = window.Scramjet;
 
 // 2. Initialize the Scramjet Interception Layer
 const scramjet = new ScramjetController({
